@@ -1,0 +1,13 @@
+@function findByKey(){
+
+}
+
+
+@function make-color($color, $text_use:true, $bg_use:true){
+  @return (
+    'color': $color,
+    #{$is_text_use}: $text_use,
+    #{$is_bg_use}: $bg_use
+  );
+  // @return $colors;
+}
