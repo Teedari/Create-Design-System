@@ -1,0 +1,18 @@
+/***** imports *****/
+
+
+/** KEYWORDS **/
+$is_text_use: 'textUsable';
+$is_bg_use: 'bgUsable';
+
+/* colors */
+$colors: (
+  'dark': ('color': #0B0D17,#{$is_text_use}: true, #{$is_bg_use}: true),
+  'light': ('color': #FFFFFF, #{$is_text_use}: true, #{$is_bg_use}: true),
+  'accent': ('color': #d2d8f9, #{$is_text_use}: false, #{$is_bg_use}: true),
+);
+
+
+/* flex variables */
+$gap-default-size: 1em;
+

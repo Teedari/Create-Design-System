@@ -1,0 +1,17 @@
+/* mixin to generate color utilities */
+@mixin GenerateColorUtils {
+  @each $key, $value in $colors {
+    $text_used: map-get($map: $value, $key: $is_text_use);
+    $bg_used: map-get($map: $value, $key: $is_bg_use);
+    @if ($text_used) {
+      .text-#{$key}{
+        color: map-get($map: $value, $key: 'color');
+      }
+    }
+    @if ($bg_used) {
+      .bg-#{$key}{
+        background-color: map-get($map: $value, $key: 'color');
+      }
+    }
+  }
+}

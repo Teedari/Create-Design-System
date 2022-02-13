@@ -1,0 +1,80 @@
+/*** UTILITY CLASSES ***/
+@import './mixins';
+
+/* padding */
+.p{
+  &-1{
+    padding: 1em;
+  }
+  &-2{
+    padding: 2em;
+  }
+  &x-2{
+    padding-inline: 2em;
+  }
+  &y-2{
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  &-3{
+    padding: 3em;
+  }
+  &-4{
+    padding: 4em;
+  }
+}
+
+
+
+/* display */
+.d{
+  &-flex{
+    display: flex;
+    gap: $gap-default-size;
+    div{
+      width: 100%;
+    }
+    &.gap-2{
+      gap: $gap-default-size * 2;
+    }
+
+    &.justify-content{
+      &-center{
+        justify-content: center;
+      }
+    }
+    &.align-items{
+      &-center{
+        align-items: center;
+      }
+    }
+  }
+
+  &-grid{
+    display: grid;
+    gap: $gap-default-size;
+  }
+}
+
+.container{
+  padding-inline: 2em;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;/* added line */
+  border: 0;
+
+}
+
+
+/** utilites from mixins **/
+@include GenerateColorUtils();
